@@ -1,3 +1,7 @@
+would be nice to edit this to allow setting custom client_id and redirect url inside settings some day, til then [here](https://www.reddit.com/r/slideforreddit/comments/14nm1ko/how_to_rebuild_slide_for_android_with_your_own/?) is a nice guide on what to edit before building.
+Don't bother with editing the backup file, just import it, then remove your account and log in again.
+
+#
 ## Current project status
 
 This project will be on indefinite hiatus for the foreseeable future, and may not be maintained.
