@@ -25,14 +25,15 @@ import java.util.UUID;
 
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
+import me.ccrama.redditslide.SettingValues;
 import okhttp3.Protocol;
 
 /**
  * Created by ccrama on 3/30/2015.
  */
 public class Authentication {
-    private static final String CLIENT_ID    = "KI2Nl9A_ouG9Qw";
-    private static final String REDIRECT_URL = "http://www.ccrama.me";
+    private static final String CLIENT_ID    = SettingValues.customapiClient.isEmpty() ? "KI2Nl9A_ouG9Qw" : SettingValues.customapiClient;
+    private static final String REDIRECT_URL = SettingValues.customapiRedirect.isEmpty() ? "http://www.ccrama.me" : SettingValues.customapiRedirect;
     public static boolean           isLoggedIn;
     public static RedditClient      reddit;
     public static LoggedInAccount   me;

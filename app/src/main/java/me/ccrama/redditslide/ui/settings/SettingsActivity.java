@@ -405,6 +405,15 @@ public class SettingsActivity extends BaseActivity
             }
         });
 
+        findViewById(R.id.settings_child_customapi).setOnClickListener(new OnSingleClickListener() {
+            @Override
+            public void onSingleClick(View v) {
+
+                Intent i = new Intent(SettingsActivity.this, SettingsCustomAPI.class);
+                startActivity(i);
+            }
+        });
+
         findViewById(R.id.settings_child_reorder).setOnClickListener(new OnSingleClickListener() {
             @Override
             public void onSingleClick(View view) {

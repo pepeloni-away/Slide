@@ -404,6 +404,9 @@ public class Reddit extends MultiDexApplication implements Application.ActivityL
 
     public void doMainStuff() {
         Log.v(LogUtil.getTag(), "ON CREATED AGAIN");
+        // i got fed up trying to figure out sharedPreferences so i'm moving this up here and
+        // read custom api from it in Authentication.java, Login.java and Reauthentication.java
+        SettingValues.setAllValues(getSharedPreferences("SETTINGS", 0));
         if (client == null) {
             client = new OkHttpClient();
         }
@@ -440,7 +443,7 @@ public class Reddit extends MultiDexApplication implements Application.ActivityL
         UserSubscriptions.pinned = getSharedPreferences("PINNED", 0);
         PostMatch.filters = getSharedPreferences("FILTERS", 0);
         ImageFlairs.flairs = getSharedPreferences("FLAIRS", 0);
-        SettingValues.setAllValues(getSharedPreferences("SETTINGS", 0));
+        // SettingValues.setAllValues(getSharedPreferences("SETTINGS", 0));
         SortingUtil.defaultSorting = SettingValues.defaultSorting;
         SortingUtil.timePeriod = SettingValues.timePeriod;
         colors = getSharedPreferences("COLOR", 0);

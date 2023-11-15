@@ -307,6 +307,11 @@
                 android:theme="@style/swipeable"
                 android:windowSoftInputMode="adjustResize"/>
         <activity
+                android:name=".ui.settings.SettingsCustomAPI"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+                android:theme="@style/swipeable"
+                android:windowSoftInputMode="adjustResize"/>
+        <activity
                 android:name=".ui.settings.ManageOfflineContent"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
                 android:theme="@style/swipeable"

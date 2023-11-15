@@ -116,6 +116,8 @@ public class SettingValues {
     public static final String PREF_SELFTEXT_IMAGE_COMMENT = "selftextImageComment";
     public static final String SYNCCIT_AUTH                = "SYNCCIT_AUTH";
     public static final String SYNCCIT_NAME                = "SYNCCIT_NAME";
+    public static final String CUSTOMAPI_CLIENT            = "CUSTOMAPI_CLIENT";
+    public static final String CUSTOMAPI_REDIRECT          = "CUSTOMAPI_REDIRECT";
     public static final String PREF_BLUR                   = "blur";
     public static final String PREF_ALBUM_SWIPE            = "albumswipe";
     public static final String PREF_COMMENT_NAV            = "commentVolumeNav";
@@ -214,6 +216,8 @@ public class SettingValues {
 
     public static String synccitName;
     public static String synccitAuth;
+    public static String customapiClient;
+    public static String customapiRedirect;
 
     public static Set<String>   titleFilters;
     public static Set<String>   textFilters;
@@ -395,6 +399,8 @@ public class SettingValues {
         scrollSeen = prefs.getBoolean(PREF_SCROLL_SEEN, false);
         synccitName = prefs.getString(SYNCCIT_NAME, "");
         synccitAuth = prefs.getString(SYNCCIT_AUTH, "");
+        customapiClient = prefs.getString(CUSTOMAPI_CLIENT, "");
+        customapiRedirect = prefs.getString(CUSTOMAPI_REDIRECT, "");
         notifSound = prefs.getBoolean(PREF_SOUND_NOTIFS, false);
         cookies = prefs.getBoolean(PREF_COOKIES, true);
         linkHandlingMode = prefs.getInt(PREF_LINK_HANDLING_MODE,

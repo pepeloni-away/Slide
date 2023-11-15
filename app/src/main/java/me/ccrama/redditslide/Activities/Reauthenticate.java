@@ -30,14 +30,15 @@ import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.util.LogUtil;
+import me.ccrama.redditslide.SettingValues;
 
 
 /**
  * Created by ccrama on 5/27/2015.
  */
 public class Reauthenticate extends BaseActivityAnim {
-    private static final String CLIENT_ID = "KI2Nl9A_ouG9Qw";
-    private static final String REDIRECT_URL = "http://www.ccrama.me";
+    private static final String CLIENT_ID    = SettingValues.customapiClient.isEmpty() ? "KI2Nl9A_ouG9Qw" : SettingValues.customapiClient;
+    private static final String REDIRECT_URL = SettingValues.customapiRedirect.isEmpty() ? "http://www.ccrama.me" : SettingValues.customapiRedirect;
 
     @Override
     public void onCreate(Bundle savedInstance) {

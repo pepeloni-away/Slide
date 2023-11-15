@@ -40,14 +40,15 @@ import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Visuals.GetClosestColor;
 import me.ccrama.redditslide.Visuals.Palette;
 import me.ccrama.redditslide.util.LogUtil;
+import me.ccrama.redditslide.SettingValues;
 
 
 /**
  * Created by ccrama on 5/27/2015.
  */
 public class Login extends BaseActivityAnim {
-    private static final String CLIENT_ID    = "KI2Nl9A_ouG9Qw";
-    private static final String REDIRECT_URL = "http://www.ccrama.me";
+    private static final String CLIENT_ID    = SettingValues.customapiClient.isEmpty() ? "KI2Nl9A_ouG9Qw" : SettingValues.customapiClient;
+    private static final String REDIRECT_URL = SettingValues.customapiRedirect.isEmpty() ? "http://www.ccrama.me" : SettingValues.customapiRedirect;
     Dialog                           d;
     CaseInsensitiveArrayList subNames;
 
