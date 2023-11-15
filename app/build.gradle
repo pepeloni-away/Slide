@@ -22,10 +22,10 @@ android {
 
     flavorDimensions "variant"
     productFlavors {
-        withGPlay {
-            dimension "variant"
-            buildConfigField "boolean", "isFDroid", "false"
-        }
+        // withGPlay {
+        //     dimension "variant"
+        //     buildConfigField "boolean", "isFDroid", "false"
+        // }
         noGPlay {
             dimension "variant"
             buildConfigField "boolean", "isFDroid", "true"
@@ -36,7 +36,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            resValue "string", "app_name", "Slide"
+            resValue "string", "app_name", "Slided"
         }
         debug {
             applicationIdSuffix ".debug"
@@ -76,7 +76,7 @@ android {
 
 dependencies {
 /** Flavors **/
-    withGPlayImplementation 'com.google.android.gms:play-services-drive:11.4.2'
+    // withGPlayImplementation 'com.google.android.gms:play-services-drive:11.4.2'
 
 /** Custom **/
     implementation 'com.github.Haptic-Apps:JRAW:9c8a410a06'
