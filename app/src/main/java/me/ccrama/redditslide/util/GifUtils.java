@@ -468,9 +468,9 @@ public class GifUtils {
         */
         String getUrlFromApi(JsonObject result){
           if (!SettingValues.hqgif && result.getAsJsonObject("gfyItem").has("mobileUrl")) {
-            return result.getAsJsonObject("gfyItem").get("mobileUrl").getAsString();
+            return result.getAsJsonObject("gfyItem").get("mobileUrl").getAsString().replace("-silent.mp4", ".mp4");
           } else {
-            return result.getAsJsonObject("gfyItem").get("mp4Url").getAsString();
+            return result.getAsJsonObject("gfyItem").get("mp4Url").getAsString().replace("-silent.mp4", ".mp4");
           }
         }
 
