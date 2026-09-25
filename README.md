@@ -1,3 +1,5 @@
+archival note: much better fork at https://github.com/cygnusx-1-org/Slide
+
 Fork of Slide with reddit custom api support
 #
 ## Current project status
